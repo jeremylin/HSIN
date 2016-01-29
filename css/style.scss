@@ -1,0 +1,594 @@
+html ,body {
+	font-family: 'Muli', Helvetica, Arial, "Microsoft Jhenghei", "微軟正黑體", sans-serif;
+	color: #7D7D7D;
+	width: 100%;
+	height: 100%;
+	font-size: 14px;
+}
+
+/*共用*/
+.more {
+	display: none;
+	font-weight: 100;
+	color: #636363;
+}
+
+/*情境圖*/
+.hero {
+	width: 100%;
+	height: calc(100vh - 70px);
+	min-height: 400px;
+	background: url(../images/hero_img.jpg) 50% 50% no-repeat;
+	-moz-background-size: cover;
+	-webkit-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	position: relative;
+
+	.slogan {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		font-size: 100px;
+		font-weight: 800;
+		color: #ffffff;
+		text-align: center;
+		-moz-transform: translate(-50%, -50%);
+		-ms-transform: translate(-50%, -50%);
+		-webkit-transform: translate(-50%, -50%);
+		transform: translate(-50%, -50%);
+	}
+
+	 
+	.blink { 
+		font-weight: 800;
+		-moz-animation: twinkling 0.6s infinite ease-in-out;
+		-ms-animation: twinkling 0.6s infinite ease-in-out; 
+		-webkit-animation: twinkling 0.6s infinite ease-in-out; 
+		animation: twinkling 0.6s infinite ease-in-out; 
+	}
+
+	@-moz-keyframes twinkling {
+		0% { opacity: 0;}
+		100% { opacity: 1;}
+	}
+
+	@-ms-keyframes twinkling {
+		0% { opacity: 0;}
+		100% { opacity: 1;}
+	}
+
+	@-webkit-keyframes twinkling {
+		0% { opacity: 0;}
+		100% { opacity: 1;}
+	}
+
+	@-o-keyframes twinkling {
+		0% { opacity: 0;}
+		100% { opacity: 1;}
+	}
+
+	@keyframes twinkling {
+		0% { opacity: 0;}
+		100% { opacity: 1;}
+	}
+}
+
+/*header*/
+header {
+	width: 100%;
+	background-color: #142A2D;
+	border-bottom: 5px solid #6544FF;
+
+	&.scroll-fix {
+		z-index: 2;
+	}
+
+	.headerStickyWrap {
+		width: 100%;
+		height: 70px;
+		margin: 0 auto;
+		position: relative;
+
+		.logo {
+			color: #6544FF;
+			font-size: 0;
+			position: absolute;
+			left: 30px;
+			top: 11px;
+
+			a {
+				display: block;
+			}
+		}
+
+		.navWrap {
+			position: absolute;
+			right: 10px;
+			margin: 20px 0 0;
+			overflow: hidden;
+			text-align: right;
+
+			li {
+				float: left;
+				padding-right: 25px;
+				line-height: 50px;
+				font-size: 18px;
+
+				a {
+					display: block;
+					padding: 0 15px;
+					color: #AFAFAF;
+
+					&:hover {
+						color: #E7BC2D;
+					}
+				}
+			}
+		}
+
+		.mobile-nav {
+			position: relative;
+			width: 100%;
+			top: 10px;
+			text-align: right;
+			display: none;
+
+			.menu-btn {
+				display: inline-block;
+				width: 50px;
+				height: 50px;
+				background: url(../images/hamburger.png) 50% 50% no-repeat;
+				cursor: pointer;
+				position: absolute;
+				right: 20px;
+				z-index: 3;
+			}
+
+			.responsive-menu {
+				display: none;
+				z-index: 100;
+
+				.menu {
+					display: block;
+					padding: 0;
+					margin: 0;
+
+					li {
+						line-height: 60px;
+						text-align: center;
+						background-color: #142A2D;
+
+						a {
+							font-size: 18px;
+							display: block;
+							color: #AFAFAF;
+						}
+
+						&:hover {
+							background-color: #0C2023;
+						}
+					}
+				}
+			}
+
+			.expand {
+				display: block;
+				width: 100%;
+				position: absolute;
+				top: 65px;
+			}
+
+		}
+	}
+}
+
+/*section*/
+section {
+	width: 100%;
+
+	.intro {
+		background: url(../images/about_us.jpg) 50% 50% no-repeat;
+		height: 680px;
+
+		.introParagram {
+			margin-bottom: 35px;							
+		} 
+
+		li {
+			line-height: 26px;
+		}
+	}
+
+	.jobs {
+		background: url(../images/jobs.jpg) 50% 50% no-repeat;
+		height: 430px;
+
+		.jobItems {
+			border-bottom: 1px solid #cccccc;
+			padding: 8px 0;
+
+			a {
+				display: block;
+				width: 100%;
+				line-height: 42px;
+				overflow: hidden;
+				color: #7D7D7D;
+
+				&:hover {
+					color: #FF9F00;
+				}
+
+				.jobPosition {
+					float: left;
+					width: 40%;
+				}
+
+				.jobQualification {
+					float: right;
+					width: 50%;
+					text-align: right;
+
+					span {
+						padding-left: 60px;
+					}
+				}
+			}
+		}
+
+		.sincere {
+			text-align: center;
+			font-size: 22px;
+			margin: 65px 15px 40px;
+			color: #FF9F00;
+		}
+	}
+
+	.mail {
+		background: url(../images/mail.png) 50% 50% no-repeat;
+		margin-top: 250px;
+		height: 640px;
+		
+		.msgWrap {
+			width: 960px;
+			height: 100%;
+			margin: 0 auto;
+			position: relative;
+
+			.mailMsg {
+				position: absolute;
+				top: 28%;
+				right: 8%;
+
+				.suggestion {
+					font-size: 40px;
+					line-height: 1.4em;
+					color: #ffffff;
+					text-shadow: 5px 2px 5px #333333;
+				}
+
+				a {
+					display: block;
+					text-align: left;
+					line-height: 30px;
+					@include radius(6px);
+					padding: 14px 20px 10px;
+					background-color: rgba(255,255,255,0.7);
+					color: #251700;
+					font-size: 20px;
+					margin-bottom: 10px;
+					font-weight: 800;
+
+					&:hover {
+						background-color: rgba(90, 57, 28, 0.7);
+						color: #D8CCB8;
+						@include shadow(1px, 1px, 1px, 0px, rgba(169, 169, 169, 0.68));
+						text-decoration: underline;
+
+						.address {
+							text-decoration: underline;
+						}
+					}
+
+					.address {
+						display: inline-block;
+					}
+				}
+			}
+		}
+	}
+
+	.container {
+		-moz-background-size: cover;
+		-webkit-background-size: cover;
+		-o-background-size: cover;
+		background-size: cover;
+
+		.infoItem {
+			width: 960px;
+			margin: 0 auto;
+			background-color: #F7F7F7;
+			position: relative;
+			top: 115px;
+
+			.itemTitle {
+				background-color: #000000;
+				color: #ffffff;
+				font-size: 30px;
+				position: absolute;
+				left: -50px;
+				top: -45px;
+				width: 115px;
+				padding: 15px 30px;
+				margin: 0.67em 0;
+			}
+
+			.itemDetail {
+				width: 90%;
+				margin: 0 auto;
+				padding: 60px 0 20px;
+
+				p {
+					line-height: 1.8em;
+				}
+
+				ol, ul {
+					padding-left: 0;
+				}
+			}
+		}
+	}
+
+	.slider {
+		width: 100%;
+		margin: 200px 0 170px;
+		padding-top: 80px;
+		overflow: hidden;
+
+		.fancybox {
+			width: 20%;
+			float: left;
+
+			img {
+				width: 100%;
+			}
+		}
+	}
+}
+
+/*footer*/
+footer {
+	background-color: #232323;
+	padding: 20px 0;
+	text-align: center;
+}
+
+/*GoTop*/
+#gotop {
+    display: none;
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    background: url(../images/top_move.png) 44% 50% no-repeat;
+    width: 34px;
+    height: 34px;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 1280px) {
+    /// 如果使用者之視窗寬度介於 960px ~ 1280px，將會再載入這裡的 CSS。
+
+    .hero {
+    	.slogan {
+    		font-size: 70px;
+    	}
+    }
+
+	section {
+		.jobs {
+			.jobItems {
+				a {
+					.jobQualification {
+						width: 60%;
+					}
+				}
+			}
+		}
+
+		.container {
+			.infoItem {
+				width: 900px;
+
+				.itemTitle {
+					left: -30px;
+				}
+			}
+		}
+
+		.mail {
+			.msgWrap {
+				width: 900px;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 959px) {
+    // 如果使用者之視窗寬度介於 768px ~ 959px，將會再載入這裡的 CSS。 
+
+    .hero {
+    	.slogan {
+    		font-size: 60px;
+    	}
+    }
+
+	section {
+		.jobs {
+			.jobItems {
+				a {
+					.jobPosition {
+						width: 85%;
+					}
+
+					.jobQualification {
+						width: 10%;
+
+						.salary, .experience {
+							display: none;
+						}
+
+						.more {
+							display: block;
+							padding-left: 0;
+						}
+					}
+				}
+			}
+		}
+
+		.container {
+			.infoItem {
+				width: 90%;
+			}
+		}
+
+		.mail {
+			.msgWrap {
+				width: 90%;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 767px) {
+    // 如果使用者之視窗寬度介於 481px ~ 767px，將會再載入這裡的 CSS。
+
+    header {
+    	.headerStickyWrap {
+		    .desktop-nav {
+		    	display: none;
+		    }
+
+		    .mobile-nav {
+		    	display: block;
+		    }
+    	}
+    }
+
+    .hero {
+    	.slogan {
+    		font-size: 36px;
+    	}
+    }
+
+	section {
+		.intro {
+			height: 880px;
+		}
+
+		.slider .fancybox {
+			width: 50%;
+		}
+
+		.mail {
+			background: url(../images/mail.png) 44% 50% no-repeat;
+		}
+	} 
+}
+
+@media screen and (max-width: 480px) {
+    // 如果使用者之視窗寬度介於 321px ~ 480px，將會再載入這裡的 CSS。
+
+	header .headerStickyWrap .logo {
+		left: 20px;
+		top: 18px;
+
+		img {
+			width: 75%;
+		}
+	}
+
+    .hero {
+    	.slogan {
+    		font-size: 26px;
+    	}
+    }
+
+	section {
+		.jobs {
+			.jobItems a {
+				line-height: 26px;
+				font-size: 12px;
+
+				.jobPosition {
+					width: 90%;
+				}
+
+				.jobQualification {
+					width: 5%;
+				}
+			}
+
+			.sincere {
+				font-size: 18px;
+			}
+		}
+
+		.mail {
+			background: url(../images/mail.png) 29% 50% no-repeat;
+
+			.msgWrap .mailMsg {
+				top: 38%;
+				right: 0;
+				width: 100%;
+
+				.suggestion {
+					text-align: center;
+				}
+
+				a {
+					font-size: 18px;
+
+					.more {
+						display: inline-block;
+						float: right;
+					}
+				}
+			}
+		}
+	} 
+}
+
+@media screen and (max-device-width: 320px) {
+    // 如果使用者之裝置寬度 <= 320px，將會再載入這裡的 CSS。
+
+    .hero {
+    	.slogan {
+    		font-size: 22px;
+    	}
+    }
+
+	section {
+		.intro {
+			height: 1050px;
+		}
+
+		.jobs {
+			.sincere {
+				font-size: 26px;
+			}
+		}
+
+		.mail {
+			.msgWrap .mailMsg {
+				.suggestion {
+					font-size: 34px;
+				}
+
+				a {
+					font-size: 16px;
+				}
+			}
+		}
+	} 
+}
