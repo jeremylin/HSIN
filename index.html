@@ -35,7 +35,7 @@
 		</div>
 		<header id="bar">
 			<nav class="headerStickyWrap">
-				<h1 class="logo"><a href="#"><img src="images/logo.png" alt="鑫概念科技有限公司 logo"></a>鑫概念科技有限公司</h1>
+				<h1 class="logo" id="goTop"><a href="#"><img src="images/logo.png" alt="鑫概念科技有限公司 logo"></a>鑫概念科技有限公司</h1>
 				<ul class="navWrap desktop-nav">
 					<li><a href="#intro">關於 _</a></li>
 					<li><a href="#office">環境 _</a></li>
@@ -191,20 +191,20 @@
 		    })
 		</script>
 		<script type="text/javascript">
-		$(function(){
-		    $("#gotop").click(function(){
-		        jQuery("html,body").animate({
-		            scrollTop:0
-		        },1000);
-		    });
-		    $(window).scroll(function() {
-		        if ( $(this).scrollTop() > 300){
-		            $('#gotop').fadeIn("fast");
-		        } else {
-		            $('#gotop').stop().fadeOut("fast");
-		        }
-		    });
-		});
+			$(function(){
+			    $("#gotop, #goTop").click(function(){
+			        jQuery("html,body").animate({
+			            scrollTop:0
+			        },1000);
+			    });
+			    $(window).scroll(function() {
+			        if ( $(this).scrollTop() > 500){
+			            $('#gotop').fadeIn("fast");
+			        } else {
+			            $('#gotop').stop().fadeOut("fast");
+			        }
+			    });
+			});
 		</script>
 	</body>
 </html>
